@@ -290,3 +290,17 @@ footer{padding:48px 0 60px;color:var(--muted);font-size:.9rem}
 .scface b{display:block;font-family:"Barlow Condensed",sans-serif;font-size:5.5rem;line-height:1;color:#E2683A;font-variant-numeric:tabular-nums}
 .scface b.low{color:#FF4D3D}
 @media (max-width:760px){.shotclock{grid-template-columns:1fr}.scface b{font-size:4rem}}
+
+/* baseball */
+.hzs{fill:none;stroke:transparent;stroke-width:26;pointer-events:stroke}
+.hzs:hover{fill:none;stroke:rgba(255,255,255,.18)}
+.hzs.on{fill:none;stroke:rgba(242,194,48,.45)}
+.bboard{grid-template-columns:repeat(3,1fr) 1.1fr .8fr}
+.bboard .count .lights{display:flex;gap:8px;margin-top:10px}
+.lights i{width:20px;height:20px;border-radius:50%;border:2px solid #5D6E64;background:transparent}
+.lights i.on-b{background:#7FD39A;border-color:#7FD39A}
+.lights i.on-s{background:#F2C230;border-color:#F2C230}
+.lights i.on-o{background:#FF4D3D;border-color:#FF4D3D}
+.diamond{width:64px;height:auto;display:block;margin-top:4px}
+@media (max-width:760px){.bboard{grid-template-columns:repeat(3,1fr)}.bboard .count{border-bottom:1px solid rgba(255,255,255,.12)}}
+#zoneSvg{width:auto;max-width:100%;max-height:620px;margin:0 auto;min-width:0}
