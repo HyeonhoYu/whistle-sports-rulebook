@@ -2,7 +2,7 @@
 
 Plain-language sports rules for everyday viewers, with diagrams you can tap and a referee cat to explain every call.
 
-Live pages so far: **American football**, **Soccer**, **Basketball**, **Baseball**, **Volleyball**, **Ice hockey**, **Tennis**, **Badminton**, **Table tennis**, **Boxing**, **Judo**, **Swimming**, and **Sprinting**. The other 5 sports appear on the home page as "Rules page in progress."
+All 18 sports have full rules pages: American football, soccer, basketball, baseball, volleyball, ice hockey, tennis, badminton, table tennis, boxing, judo, swimming, sprinting, alpine skiing, golf, curling, figure skating, and gymnastics. Each page has a tap-to-explain diagram, at least one interactive simulator, tricky-rule flip cards, a glossary, and a 10-question quiz.
 
 ## Put it on GitHub Pages
 

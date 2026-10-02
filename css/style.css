@@ -385,3 +385,39 @@ footer{padding:48px 0 60px;color:var(--muted);font-size:.9rem}
 .rtbig.on{color:#7FD39A}
 .rtpanel .btn{border-color:#EEF3EC;background:#203229;color:#EEF3EC}
 .rtpanel .btn.rtgo{background:#F2C230;color:#18221D;border-color:#F2C230;font-size:1.3rem;padding:12px 40px}
+
+/* alpine skiing */
+.csstats{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:8px 20px;margin:8px 0 10px}
+.csstats dt{font-size:.8rem;color:var(--muted)}
+.csstats dd{margin:0;font-weight:600}
+.rctab tr.hl td{background:rgba(242,194,48,.18)}
+
+/* golf */
+.mpholes{display:grid;grid-template-columns:repeat(18,1fr);gap:4px}
+.mpholes span{text-align:center;padding:8px 0;border-radius:6px;background:var(--chip);font-family:"Barlow Condensed",sans-serif;font-weight:600}
+.mpholes span.w{background:#2A6B3F;color:#fff}
+.mpholes span.l{background:#C8482F;color:#fff}
+.mpholes span.h{background:#A9B8AE;color:#18221D}
+@media (max-width:760px){.mpholes{grid-template-columns:repeat(9,1fr)}}
+
+/* figure skating */
+.jxgrid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:24px}
+.bvbars{display:grid;gap:6px;margin-top:6px}
+.bvbars div{display:grid;grid-template-columns:150px 1fr 52px;align-items:center;gap:8px;font-size:.92rem}
+.bvbars i{display:block;height:14px;border-radius:4px;background:#2F6FD6}
+.bvbars b{font-family:"Barlow Condensed",sans-serif;font-size:1.15rem;text-align:right}
+.pbform{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:10px;margin-top:16px}
+.pbform label{display:grid;gap:4px;font-weight:600}
+.pbform select{font:inherit;padding:8px 10px;border-radius:8px;border:2px solid var(--line);background:var(--surface);color:var(--ink)}
+.marks{display:inline-flex;gap:4px}
+.marks i{font-style:normal;min-width:28px;padding:2px 4px;border-radius:4px;background:rgba(255,255,255,.1);text-align:center}
+.marks i.x{text-decoration:line-through;opacity:.45}
+.pbtab td{white-space:nowrap}
+.pbmini{background:#14201A;color:#EEF3EC;padding:12px;border-radius:8px;display:inline-block}
+.scorebar{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-top:14px}
+.scorebar div{background:#14201A;color:#EEF3EC;border-radius:10px;padding:10px 16px}
+.scorebar small{display:block;color:#A9B8AE;font-size:.8rem}
+.scorebar b{font-family:"Barlow Condensed",sans-serif;font-size:1.8rem}
+.scorebar .tot b{color:#F2C230}
+.scorebar span{font-family:"Barlow Condensed",sans-serif;font-size:1.8rem;font-weight:700}
+@media (max-width:760px){.jxgrid{grid-template-columns:1fr}.bvbars div{grid-template-columns:110px 1fr 46px}}
