@@ -2,7 +2,7 @@
 
 Plain-language sports rules for everyday viewers, with diagrams you can tap and a referee cat to explain every call.
 
-Live pages so far: **American football**, **Soccer**, **Basketball**, and **Baseball**. The other 14 sports appear on the home page as "Rules page in progress."
+Live pages so far: **American football**, **Soccer**, **Basketball**, **Baseball**, **Volleyball**, **Ice hockey**, **Tennis**, **Badminton**, **Table tennis**, **Boxing**, **Judo**, **Swimming**, and **Sprinting**. The other 5 sports appear on the home page as "Rules page in progress."
 
 ## Put it on GitHub Pages
 
