@@ -5,7 +5,7 @@ function renderHome(app){
   app.innerHTML = `<div class="wrap">
     <div class="home-hero">
       <div><h1>Know what you're watching.</h1>
-        <p class="lede">Plain-language rules for 18 sports, with diagrams you can tap. Narrow the list any way you like: pick options from as many groups as you want.</p></div>
+        <p class="lede">Plain-language rules for ${SPORTS.length} sports, with diagrams you can tap. Narrow the list any way you like: pick options from as many groups as you want.</p></div>
       <figure class="ref"><img src="${img("referee.webp")}" alt="An orange tabby cat in a striped referee shirt, waving and holding a whistle">
         <figcaption class="bubble">Pick a sport. I'll explain every call.</figcaption></figure>
     </div>
