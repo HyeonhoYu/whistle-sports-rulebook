@@ -430,3 +430,12 @@ footer{padding:48px 0 60px;color:var(--muted);font-size:.9rem}
   .ref{margin:84px 0 0 auto}
   .bubble{top:-70px;left:0;right:0;font-size:1.05rem}
 }
+
+/* cricket */
+.overrow{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.overrow small{color:var(--muted)}
+.ball{display:inline-grid;place-items:center;min-width:34px;height:34px;padding:0 6px;border-radius:17px;margin-right:6px;background:var(--chip);font-family:"Barlow Condensed",sans-serif;font-weight:700;font-size:1.1rem}
+.ball.bw{background:#C8482F;color:#fff}
+.ball.bb{background:#2A6B3F;color:#fff}
+.ball.bx{background:#F2C230;color:#18221D}
+.ball.fh{background:none;border:2px dashed #F2C230;color:var(--ink);font-size:.9rem}
