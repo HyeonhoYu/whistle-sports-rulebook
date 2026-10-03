@@ -2,6 +2,16 @@
 
 window.SPORT_PAGES = window.SPORT_PAGES || {};
 
+/* Timers and animation loops started by a page are stopped when you leave it. */
+(function(){
+  const timers = new Set(), si = window.setInterval.bind(window), st = window.setTimeout.bind(window), raf = window.requestAnimationFrame.bind(window);
+  let token = 0;
+  window.setInterval = (f, t, ...a) => { const id = si(f, t, ...a); timers.add(id); return id; };
+  window.setTimeout = (f, t, ...a) => { const id = st(f, t, ...a); timers.add(id); return id; };
+  window.requestAnimationFrame = cb => { const my = token; return raf(ts => { if(my === token) cb(ts); }); };
+  window.__clearPageTimers = () => { timers.forEach(id => { clearInterval(id); clearTimeout(id); }); timers.clear(); token++; };
+})();
+
 /* Image paths. A single-file build can override these with window.INLINE_IMGS. */
 function img(name){ return (window.INLINE_IMGS && window.INLINE_IMGS[name]) || `assets/img/${name}`; }
 function catImg(id){ return img(`cats/${id}.webp`); }

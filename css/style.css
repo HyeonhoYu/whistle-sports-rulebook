@@ -439,3 +439,4 @@ footer{padding:48px 0 60px;color:var(--muted);font-size:.9rem}
 .ball.bb{background:#2A6B3F;color:#fff}
 .ball.bx{background:#F2C230;color:#18221D}
 .ball.fh{background:none;border:2px dashed #F2C230;color:var(--ink);font-size:.9rem}
+.pcard{width:34px;height:46px;border-radius:5px;border:2px solid #18221D;transform:rotate(-8deg);margin:4px 0 6px}

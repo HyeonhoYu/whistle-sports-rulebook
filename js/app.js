@@ -10,6 +10,7 @@ function route(){
   const key = page ? id : "home";
   if(key === current) return;
   current = key;
+  if(window.__clearPageTimers) window.__clearPageTimers();
   if(page){ page.render(app); const s = SPORTS.find(x => x.id === id); document.title = `${s ? s.name : id} rules | Whistle`; }
   else { renderHome(app); document.title = "Whistle: Rules Made Easy"; }
   window.scrollTo(0, 0);
