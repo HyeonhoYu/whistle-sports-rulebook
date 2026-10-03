@@ -51,3 +51,8 @@ Each question in a sport file looks like this:
 ## Support
 
 [Buy Me a Coffee](https://buymeacoffee.com/henryyu)
+
+
+## Referee cat on sport pages
+
+`decorateRefs()` in `js/common.js` runs after every sport page renders and places the referee cat beside up to four section headings, picking a pose by the heading text (offside, fouls and cards, signals, make the call, scoring, clock), plus fixed poses for Tricky rules and the quiz. Edit `REF_POSES` to change the matching or the speech bubbles.

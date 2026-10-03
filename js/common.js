@@ -208,3 +208,38 @@ function attemptsGame(id, heights, unit, rivals, you){
     }
   };
 }
+
+/* ---------- Referee cat appearances on sport pages ----------
+   After a page renders, the referee cat appears beside a few section headings, chosen by what the section is about. */
+const REF_POSES = [
+  {re:/offside|icing/i, img:"offside", tip:"Flag's up! Here's how it works."},
+  {re:/penalt|foul|card|punish|violation|deduction|disqualif|getting out/i, img:"yellow", tip:"Rules are rules. Here's what costs you."},
+  {re:/signal|calls|umpire|referee/i, img:"point", tip:"Watch my arms. Each signal means something."},
+  {re:/make the call|be the|right of way|let, stroke|judge a|referee:/i, img:"redflag", tip:"Your turn to make the call."},
+  {re:/scor|points|ways to win/i, img:"goal", tip:"That one counts!"},
+  {re:/clock|round|the race|the event|the match|competition|a game|bout|race day|a tournament|the clock|innings|format/i, img:"whistle", tip:"Time matters. Here's how it runs."}
+];
+function decorateRefs(root){
+  const secs = [...root.querySelectorAll("section.block")]; if(!secs.length) return;
+  const used = new Set(), picks = [];
+  const place = (sec, pose, tip) => {
+    if(!sec || used.has(pose) || sec.querySelector(".refcat")) return false;
+    const h = sec.querySelector("h2"); if(!h) return false;
+    const lede = h.nextElementSibling && h.nextElementSibling.classList.contains("lede") ? h.nextElementSibling : null;
+    const head = document.createElement("div"); head.className = "sechead"; const txt = document.createElement("div"); txt.className = "sectxt";
+    sec.insertBefore(head, h); txt.appendChild(h); if(lede) txt.appendChild(lede); head.appendChild(txt);
+    head.insertAdjacentHTML("beforeend", `<figure class="refcat" aria-hidden="true"><figcaption>${tip}</figcaption><img src="${img(`ref/${pose}.webp`)}" alt=""></figure>`);
+    used.add(pose); return true;
+  };
+  const byId = suf => secs.find(s => s.id.endsWith(suf));
+  /* contextual: up to two, in priority order */
+  let n = 0;
+  for(const pose of REF_POSES){
+    if(n >= 2) break;
+    const sec = secs.find(s => !/-(tricky|words|quiz)$/.test(s.id) && !s.querySelector(".refcat") && pose.re.test((s.querySelector("h2") || {}).textContent || ""));
+    if(sec && place(sec, pose.img, pose.tip)) n++;
+  }
+  if(n < 2 && place(secs[0], "direction", "Tap around. I'll show you what everything does.")) n++;
+  place(byId("-tricky"), "review", "Even referees double-check these.");
+  place(byId("-quiz"), "one", "Ready? Show me what you know.");
+}
