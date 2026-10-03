@@ -2,7 +2,7 @@
 
 Plain-language sports rules for everyday viewers, with diagrams you can tap and a referee cat to explain every call.
 
-All 30 sports have full rules pages: American football, soccer, basketball, baseball, volleyball, ice hockey, tennis, badminton, table tennis, boxing, judo, swimming, sprinting, alpine skiing, golf, curling, figure skating, gymnastics, rugby, cricket, handball, water polo, wrestling, fencing, taekwondo, archery, cycling, speed skating, diving, and snowboarding. Each page has a diagram or explorer you can tap, at least one interactive simulator, tricky-rule flip cards, a glossary, and a 10-question quiz.
+All 49 sports have full rules pages: American football, soccer, basketball, baseball, volleyball, ice hockey, tennis, badminton, table tennis, boxing, judo, swimming, sprinting, alpine skiing, golf, curling, figure skating, gymnastics, rugby, cricket, handball, water polo, wrestling, fencing, taekwondo, archery, cycling, speed skating, diving, snowboarding, softball, field hockey, lacrosse, beach volleyball, squash, pickleball, bowling, darts, hurdles, high jump, pole vault, marathon, weightlifting, karate, rowing, canoe and kayak, surfing, ski jumping, and bobsleigh. Each page has a diagram or explorer you can tap, at least one interactive simulator, tricky-rule flip cards, a glossary, and a 10-question quiz.
 
 ## Put it on GitHub Pages
 
@@ -27,6 +27,9 @@ assets/img/                Character images (referee cat, header avatar, one pic
 ```
 
 ## Add a new sport
+
+Newer pages use `sportPage(app, config)` from `js/common.js`, which builds the hero, jump links, diagram, custom sections, timeline, flip cards, glossary, and quiz from one config object. See `js/sports/hurdles.js` for a short example.
+
 
 1. Copy `js/sports/soccer.js` to `js/sports/<sport-id>.js`, using the same id as in `js/data.js` (for example `basketball`).
 2. Replace the content: hero text and facts, diagrams, tricky rules, glossary, and the 10 quiz questions.

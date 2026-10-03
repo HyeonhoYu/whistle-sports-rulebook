@@ -440,3 +440,14 @@ footer{padding:48px 0 60px;color:var(--muted);font-size:.9rem}
 .ball.bx{background:#F2C230;color:#18221D}
 .ball.fh{background:none;border:2px dashed #F2C230;color:var(--ink);font-size:.9rem}
 .pcard{width:34px;height:46px;border-radius:5px;border:2px solid #18221D;transform:rotate(-8deg);margin:4px 0 6px}
+
+/* bowling scoresheet */
+.bwsheet{display:grid;grid-template-columns:repeat(9,1fr) 1.4fr;border:2px solid var(--ink);border-radius:8px;overflow:hidden;background:var(--surface)}
+.bwf{border-right:1px solid var(--line);display:grid;grid-template-rows:auto auto 1fr;min-height:84px}
+.bwf:last-child{border-right:0}
+.bwf small{font-size:.75rem;color:var(--muted);text-align:center;padding-top:2px}
+.bwf.now{background:rgba(242,194,48,.18)}
+.bwm{display:flex;justify-content:flex-end}
+.bwm span{width:26px;height:26px;border-left:1px solid var(--line);border-bottom:1px solid var(--line);display:grid;place-items:center;font-family:"Barlow Condensed",sans-serif;font-weight:700;font-size:1.05rem}
+.bwf b{font-family:"Barlow Condensed",sans-serif;font-size:1.5rem;text-align:center;align-self:center}
+@media (max-width:760px){.bwsheet{grid-template-columns:repeat(5,1fr)}.bwf:nth-child(5){border-right:0}.bwf:nth-child(-n+5){border-bottom:1px solid var(--line)}}

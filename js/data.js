@@ -3,10 +3,10 @@
    The card switches to "Read the rules" automatically once that page is registered. */
 
 const FILTERS = [
-  {key:"format", label:"Type of sport", options:[["ball","Ball and puck games"],["racket","Racket"],["combat","Combat"],["race","Races"],["target","Target"],["artistic","Judged artistry"]]},
+  {key:"format", label:"Type of sport", options:[["ball","Ball and puck games"],["racket","Racket"],["combat","Combat"],["race","Races"],["target","Target"],["artistic","Judged artistry"],["field","Jumps and lifts"]]},
   {key:"players", label:"Who competes", options:[["individual","Individual"],["h2h","One on one"],["team","Team"]]},
   {key:"venue", label:"Where it's played", options:[["indoor","Indoor"],["outdoor","Outdoor"],["water","Water"],["snow","Snow and ice"]]},
-  {key:"win", label:"How you win", options:[["score","Outscore the other side"],["time","Fastest time"],["judges","Judges' scores"],["strokes","Fewest strokes"]]},
+  {key:"win", label:"How you win", options:[["score","Outscore the other side"],["time","Fastest time"],["judges","Judges' scores"],["strokes","Fewest strokes"],["measure","Highest or heaviest"]]},
   {key:"olympic", label:"Olympics", options:[["summer","Summer Games"],["winter","Winter Games"],["none","Not an Olympic sport"]]},
   {key:"level", label:"How easy to follow", options:[["easy","Easy"],["moderate","Clicks after a game or two"],["complex","Worth reading up on"]]}
 ];
@@ -41,5 +41,24 @@ const SPORTS = [
   {id:"cycling", name:"Cycling", blurb:"Road races, track sprints, and everything between.", fact:"Many races, one bike", format:["race"], players:["individual","team"], venue:["outdoor","indoor"], win:["time"], olympic:["summer"], level:["moderate"]},
   {id:"speed-skating", name:"Speed skating", blurb:"Race around an oval on long, thin blades.", fact:"Skaters race in pairs", format:["race"], players:["individual"], venue:["indoor","snow"], win:["time"], olympic:["winter"], level:["easy"]},
   {id:"diving", name:"Diving", blurb:"Flips and twists into the pool, judged on every detail.", fact:"Judges score each dive", format:["artistic"], players:["individual"], venue:["water","indoor"], win:["judges"], olympic:["summer"], level:["moderate"]},
-  {id:"snowboarding", name:"Snowboarding", blurb:"Big-air tricks judged on style, plus head-to-head races.", fact:"Judged and race events", format:["artistic","race"], players:["individual","h2h"], venue:["outdoor","snow"], win:["judges","time"], olympic:["winter"], level:["moderate"]}
+  {id:"snowboarding", name:"Snowboarding", blurb:"Big-air tricks judged on style, plus head-to-head races.", fact:"Judged and race events", format:["artistic","race"], players:["individual","h2h"], venue:["outdoor","snow"], win:["judges","time"], olympic:["winter"], level:["moderate"]},
+  {id:"softball", name:"Softball", blurb:"Like baseball, with an underhand pitch on a smaller field.", fact:"7 innings", format:["ball"], players:["team"], venue:["outdoor"], win:["score"], olympic:["summer"], level:["moderate"]},
+  {id:"field-hockey", name:"Field hockey", blurb:"Sticks, a hard ball, and goals only from inside the circle.", fact:"11 players per side", format:["ball"], players:["team"], venue:["outdoor"], win:["score"], olympic:["summer"], level:["moderate"]},
+  {id:"lacrosse", name:"Lacrosse", blurb:"Catch, carry, and shoot the ball with a netted stick.", fact:"10 players per side", format:["ball"], players:["team"], venue:["outdoor"], win:["score"], olympic:["summer"], level:["moderate"]},
+  {id:"beach-volleyball", name:"Beach volleyball", blurb:"Two players a side on sand, first to 21.", fact:"2 players per side", format:["ball"], players:["team"], venue:["outdoor"], win:["score"], olympic:["summer"], level:["easy"]},
+  {id:"squash", name:"Squash", blurb:"Two players share one court and hit against the front wall.", fact:"11 points a game", format:["racket"], players:["h2h"], venue:["indoor"], win:["score"], olympic:["summer"], level:["moderate"]},
+  {id:"pickleball", name:"Pickleball", blurb:"Paddles, a plastic ball, and a no-volley kitchen.", fact:"Games to 11", format:["racket"], players:["h2h","team"], venue:["outdoor","indoor"], win:["score"], olympic:["none"], level:["easy"]},
+  {id:"bowling", name:"Bowling", blurb:"Knock down ten pins, ten frames, with bonus points for strikes.", fact:"300 is a perfect game", format:["target"], players:["individual"], venue:["indoor"], win:["score"], olympic:["none"], level:["easy"]},
+  {id:"darts", name:"Darts", blurb:"Count down from 501 and finish on a double.", fact:"Start at 501", format:["target"], players:["h2h"], venue:["indoor"], win:["score"], olympic:["none"], level:["easy"]},
+  {id:"hurdles", name:"Hurdles", blurb:"A sprint with ten barriers in the way.", fact:"10 hurdles", format:["race"], players:["individual"], venue:["outdoor"], win:["time"], olympic:["summer"], level:["easy"]},
+  {id:"high-jump", name:"High jump", blurb:"Clear the bar without knocking it off. Three misses and you're out.", fact:"3 tries per height", format:["field"], players:["individual"], venue:["outdoor","indoor"], win:["measure"], olympic:["summer"], level:["easy"]},
+  {id:"pole-vault", name:"Pole vault", blurb:"Sprint, plant a bending pole, and fly over the bar.", fact:"Bars above 6 meters", format:["field"], players:["individual"], venue:["outdoor","indoor"], win:["measure"], olympic:["summer"], level:["easy"]},
+  {id:"marathon", name:"Marathon", blurb:"42.195 kilometers on the road, first to the finish.", fact:"42.195 km", format:["race"], players:["individual"], venue:["outdoor"], win:["time"], olympic:["summer"], level:["easy"]},
+  {id:"weightlifting", name:"Weightlifting", blurb:"Two lifts, three tries each, the heaviest total wins.", fact:"Snatch + clean and jerk", format:["field"], players:["individual"], venue:["indoor"], win:["measure"], olympic:["summer"], level:["easy"]},
+  {id:"karate", name:"Karate", blurb:"Punches and kicks scored by referees, with bigger points for harder techniques.", fact:"8-point lead wins", format:["combat"], players:["h2h"], venue:["indoor"], win:["score"], olympic:["none"], level:["moderate"]},
+  {id:"rowing", name:"Rowing", blurb:"Crews race backward in narrow boats over 2,000 meters.", fact:"2,000 m races", format:["race"], players:["individual","team"], venue:["water","outdoor"], win:["time"], olympic:["summer"], level:["easy"]},
+  {id:"canoe-kayak", name:"Canoe and kayak", blurb:"Flat-water sprints and whitewater slalom through gates.", fact:"Touch a gate: +2 s", format:["race"], players:["individual","team"], venue:["water","outdoor"], win:["time"], olympic:["summer"], level:["easy"]},
+  {id:"surfing", name:"Surfing", blurb:"Judges score each wave; your best two count.", fact:"Best 2 waves count", format:["artistic"], players:["individual"], venue:["water","outdoor"], win:["judges"], olympic:["summer"], level:["moderate"]},
+  {id:"ski-jumping", name:"Ski jumping", blurb:"Distance points plus style points from the judges.", fact:"Distance + style", format:["field"], players:["individual"], venue:["outdoor","snow"], win:["judges","measure"], olympic:["winter"], level:["moderate"]},
+  {id:"bobsleigh", name:"Bobsleigh", blurb:"A push start and an icy run, with four runs added up.", fact:"4 runs added up", format:["race"], players:["team"], venue:["outdoor","snow"], win:["time"], olympic:["winter"], level:["easy"]}
 ];
