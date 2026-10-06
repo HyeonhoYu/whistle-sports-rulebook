@@ -28,7 +28,7 @@ const judge = scenarioJudge("lxJ", [
   {t:"A team has only three players in its defensive half.", o:["Legal","Offside"], a:1, w:"Teams must keep four in the defensive half (including the goalie) and three in the attacking half."},
   {t:"A player picks up a ground ball with his hand.", o:["Legal","Illegal"], a:1, w:"Only the goalkeeper in the crease may touch the ball with the hand. Everyone else uses the stick."}
 ]);
-SPORT_PAGES["lacrosse"] = {render: app => sportPage(app, {id:"lacrosse", p:"lx", name:"Lacrosse", alt:"The tabby cat holding a lacrosse stick with a netted head",
+SPORT_PAGES["lacrosse"] = {render: app => sportPage(app, {id:"lacrosse", p:"lx", name:"Lacrosse", alt:"The tabby cat in a lacrosse helmet and gloves, cradling the ball in a netted stick",
   lede:"Players use sticks with a small net, called a pocket, to catch, carry, and throw a hard rubber ball, trying to shoot it into the other team's goal. It's fast and physical, with checks allowed in the men's game, and play continues even behind the goals.",
   facts:[["10","players per side (men's field)"],["4","quarters"],["6","feet: the goal is 6 x 6"],["2028","returns to the Olympics as Sixes"]],
   diagram:{title:"The field", svg, zones:ZONES, order:["crease","behind","box","restrain","mid","faceoff","wings"], first:"crease"},
